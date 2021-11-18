@@ -11,6 +11,8 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun open_registration(view: android.view.View) {
+        val intent = Intent(applicationContext, RegisterActivity::class.java)
+        startActivity(intent)
     }
 
     fun redirectIt(view: android.view.View) {}

@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import com.example.test_eklavya.OkHttpRequest
+import com.example.eklavyafrontend.OkHttpRequest
 import okhttp3.Call
 import okhttp3.Callback
 import okhttp3.OkHttpClient

@@ -1,4 +1,4 @@
-package com.example.test_eklavya
+package com.example.eklavyafrontend
 
 import android.util.Log
 import okhttp3.*

@@ -12,13 +12,40 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EklavyaFrontend">
         <activity
-            android:name=".RegisterActivityMentor"
+            android:name=".chat.ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".mentor.MenteeProfile"
+            android:exported="false" />
+        <activity
+            android:name=".mentee.MentorProfile"
+            android:exported="false" />
+        <activity
+            android:name=".mentee.MyMentors"
+            android:exported="false" />
+        <activity
+            android:name=".mentor.MyMentees"
+            android:exported="false" />
+        <activity
+            android:name=".mentor.MentorMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".mentee.MenteeMainActivity"
             android:exported="false" />
         <activity
             android:name=".RegisterActivityMentee"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".RegisterActivityMentor"
+            android:exported="false" />
+        <activity
+            android:name=".Register"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,9 +53,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
     </application>
 
 </manifest>

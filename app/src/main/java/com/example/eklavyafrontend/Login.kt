@@ -1,11 +1,9 @@
 package com.example.eklavyafrontend
 
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import okhttp3.Call
@@ -17,11 +15,9 @@ import org.json.JSONObject
 import java.io.IOException
 import android.content.SharedPreferences
 import android.view.View
-import com.example.eklavyafrontend.mentee.MenteeMainActivity
-import com.example.eklavyafrontend.mentee.MyMentors
-import com.example.eklavyafrontend.mentor.MentorMainActivity
 import com.example.eklavyafrontend.mentor.MyMentees
-import com.example.test_eklavya.OkHttpRequest
+import com.example.eklavyafrontend.OkHttpRequest
+import com.example.eklavyafrontend.mentee.MyMentors
 
 
 class Login : AppCompatActivity() {

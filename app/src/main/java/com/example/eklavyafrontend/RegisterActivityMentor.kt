@@ -9,7 +9,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
 import android.widget.Toast
-import com.example.test_eklavya.OkHttpRequest
+import com.example.eklavyafrontend.OkHttpRequest
 import com.example.eklavyafrontend.mentor.MentorMainActivity
 import okhttp3.Call
 import okhttp3.Callback

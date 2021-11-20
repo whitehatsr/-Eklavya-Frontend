@@ -75,11 +75,11 @@ class ChatActivity : AppCompatActivity() {
                         Log.d("responseData", "${responseData.toString()}")
                         runOnUiThread {
                             try {
-                                Toast.makeText(
-                                    applicationContext,
-                                    "$responseData",
-                                    Toast.LENGTH_SHORT
-                                ).show()
+                                //Toast.makeText(
+                                //    applicationContext,
+                               //     "$responseData",
+                                //    Toast.LENGTH_SHORT
+                               // ).show()
                             } catch (e: JSONException) {
                                 Log.d("In Catch block", "$e")
                                 e.printStackTrace()

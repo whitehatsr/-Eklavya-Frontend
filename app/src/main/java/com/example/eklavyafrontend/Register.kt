@@ -29,7 +29,7 @@ class Register : AppCompatActivity() {
 
     fun furtherInfo(view: android.view.View) {
         if (UserType.selectedItem.toString() == "Mentor") {
-            Toast.makeText(this, "Mentor Selected", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(this, "Mentor Selected", Toast.LENGTH_SHORT).show()
             val MentorIntent = Intent(this, RegisterActivityMentor::class.java)
             MentorIntent.putExtra("firstName","${firstName.text.toString()}")
             MentorIntent.putExtra("lastName","${lastName.text.toString()}")
@@ -37,7 +37,7 @@ class Register : AppCompatActivity() {
             MentorIntent.putExtra("password","${password.text.toString()}")
             startActivity(MentorIntent)
         } else {
-            Toast.makeText(this, "Mentee Selected", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(this, "Mentee Selected", Toast.LENGTH_SHORT).show()
             val MenteeIntent = Intent(this, RegisterActivityMentee::class.java)
             MenteeIntent.putExtra("firstName","${firstName.text.toString()}")
             MenteeIntent.putExtra("lastName","${lastName.text.toString()}")

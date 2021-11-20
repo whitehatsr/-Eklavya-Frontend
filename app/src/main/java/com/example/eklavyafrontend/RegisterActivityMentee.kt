@@ -99,11 +99,7 @@ class RegisterActivityMentee : AppCompatActivity() {
                         }
                     } else {
                         runOnUiThread {
-                            Toast.makeText(
-                                this@RegisterActivityMentee,
-                                "${responseData.toString()}",
-                                Toast.LENGTH_SHORT
-                            ).show()
+                            //Toast.makeText(this@RegisterActivityMentee,"${responseData.toString()}",Toast.LENGTH_SHORT).show()
                         }
 
                     }

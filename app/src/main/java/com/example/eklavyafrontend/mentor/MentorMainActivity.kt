@@ -44,7 +44,7 @@ class MentorMainActivity : AppCompatActivity(), MenteeClicked {
         Log.d("fetchDataCalled", "fetchDataCalled")
         var client = OkHttpClient()
         var request = OkHttpRequestAuth(client)
-        Toast.makeText(applicationContext, "tpken:$token", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(applicationContext, "tpken:$token", Toast.LENGTH_SHORT).show()
         request.GET(url, token!!, object : Callback {
 
 
@@ -103,8 +103,8 @@ class MentorMainActivity : AppCompatActivity(), MenteeClicked {
         alertDialog.setPositiveButton(
             "yes"
         ) { _, _ ->
-            Toast.makeText(this@MentorMainActivity, "Alert dialog closed.", Toast.LENGTH_LONG)
-                .show()
+            //Toast.makeText(this@MentorMainActivity, "Alert dialog closed.", Toast.LENGTH_LONG)
+                //.show()
             val url = "https://eklavya1.herokuapp.com/api/request/${item.requestId}/setStatus"
             val map: HashMap<String, String> = hashMapOf(
                 "status" to "approved"
@@ -117,11 +117,11 @@ class MentorMainActivity : AppCompatActivity(), MenteeClicked {
                     val responseData = response.body()?.string()
                     runOnUiThread {
                         try {
-                            Toast.makeText(
-                                this@MentorMainActivity,
-                                "${responseData.toString()}",
-                                Toast.LENGTH_SHORT
-                            ).show()
+                           // Toast.makeText(
+                            //    this@MentorMainActivity,
+                            //    "${responseData.toString()}",
+                            //    Toast.LENGTH_SHORT
+                           // ).show()
 
                         } catch (e: JSONException) {
                             e.printStackTrace()

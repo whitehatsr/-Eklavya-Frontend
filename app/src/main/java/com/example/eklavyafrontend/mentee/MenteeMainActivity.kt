@@ -48,7 +48,7 @@ class MenteeMainActivity : AppCompatActivity(), MentorClicked {
         Log.d("fetchDataCalled","fetchDataCalled")
         var client = OkHttpClient()
         var request = OkHttpRequestAuth(client)
-        Toast.makeText(applicationContext,"tpken:$token",Toast.LENGTH_SHORT).show()
+        //Toast.makeText(applicationContext,"tpken:$token",Toast.LENGTH_SHORT).show()
         request.GET(url,token!!,object :Callback{
 
 

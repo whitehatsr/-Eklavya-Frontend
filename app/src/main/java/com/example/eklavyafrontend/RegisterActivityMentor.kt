@@ -78,11 +78,11 @@ class RegisterActivityMentor : AppCompatActivity() {
                         //status code lies within 200-299
                         runOnUiThread {
                             try {
-                                Toast.makeText(
+                                /*Toast.makeText(
                                     this@RegisterActivityMentor,
                                     "${responseData.toString()}",
                                     Toast.LENGTH_SHORT
-                                ).show()
+                                ).show() */
                                 val intent =
                                     Intent(this@RegisterActivityMentor, Login::class.java)
                                 startActivity(intent)
@@ -93,11 +93,11 @@ class RegisterActivityMentor : AppCompatActivity() {
                         }
                     } else {
                         runOnUiThread {
-                            Toast.makeText(
+                            /* Toast.makeText(
                                 this@RegisterActivityMentor,
                                 "${responseData.toString()}",
                                 Toast.LENGTH_SHORT
-                            ).show()
+                            ).show() */
                         }
 
                     }

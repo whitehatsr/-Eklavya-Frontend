@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        Toast.makeText(this, "$TOKEN_KEY    $USER_ROLE", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, "$TOKEN_KEY    $USER_ROLE", Toast.LENGTH_SHORT).show()
 
     }
 }

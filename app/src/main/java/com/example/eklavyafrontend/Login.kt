@@ -126,8 +126,7 @@ class Login : AppCompatActivity() {
                     }
                 } else {
                     runOnUiThread {
-                        Toast.makeText(this@Login, "${responseData.toString()}", Toast.LENGTH_SHORT)
-                            .show()
+                        //Toast.makeText(this@Login, "${responseData.toString()}", Toast.LENGTH_SHORT).show()
                     }
 
                 }

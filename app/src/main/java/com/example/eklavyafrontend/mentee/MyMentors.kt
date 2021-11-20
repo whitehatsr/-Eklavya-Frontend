@@ -105,7 +105,7 @@ class MyMentors : AppCompatActivity(), MyMentorClicked {
     }
 
     override fun onViewProfileClicked(item: MyMentorsInfo) {
-        Toast.makeText(applicationContext, "View Profile clicked", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(applicationContext, "View Profile clicked", Toast.LENGTH_SHORT).show()
         val viewProfileIntent = Intent(this@MyMentors, MentorProfile::class.java)
         viewProfileIntent.putExtra("token", "$token")
         viewProfileIntent.putExtra("_id", "$userId")
@@ -119,7 +119,7 @@ class MyMentors : AppCompatActivity(), MyMentorClicked {
     }
 
     override fun onChatClicked(item: MyMentorsInfo) {
-        Toast.makeText(applicationContext, "Chat item clicked", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(applicationContext, "Chat item clicked", Toast.LENGTH_SHORT).show()
         val chatIntent = Intent(this@MyMentors, ChatActivity::class.java)
         chatIntent.putExtra("token", "$token")
         chatIntent.putExtra("_id", "$userId")

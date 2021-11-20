@@ -62,7 +62,7 @@
                 android:layout_height="573dp">
 
 
-                <EditText
+                <AutoCompleteTextView
                     android:id="@+id/etCompany"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -75,6 +75,21 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/etDesignation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="120dp"
+                    android:layout_marginEnd="15dp"
+                    android:hint="Designation"
+                    android:minHeight="48dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
 
                 <!--                <com.google.android.material.textfield.TextInputLayout-->
                 <!--                    android:id="@+id/languagelayout"-->
@@ -147,83 +162,68 @@
                 <!--                    app:layout_constraintStart_toStartOf="parent"-->
                 <!--                    app:layout_constraintTop_toBottomOf="@id/skills_layout" />-->
 
-                <EditText
-                    android:id="@+id/etExperience"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="236dp"
-                    android:layout_marginEnd="15dp"
-                    android:hint="Experience(Years)"
-                    android:minHeight="48dp"
-                    android:inputType="number"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <EditText
-                    android:id="@+id/etDesignation"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="140dp"
-                    android:layout_marginEnd="15dp"
-                    android:hint="Designation"
-                    android:minHeight="48dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
                 <Spinner
-                    android:id="@+id/spinnerField"
+                    android:id="@+id/idSelectSkillSpinner"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:layout_marginStart="15dp"
-                    android:layout_marginTop="352dp"
+                    android:layout_marginTop="300dp"
                     android:layout_marginEnd="15dp"
                     android:drawableRight="@android:drawable/arrow_down_float"
                     android:drawablePadding="16dp"
-                    android:entries = "@array/Fields"
+                    android:entries="@array/Fields"
                     android:padding="12dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck" />
 
                 <TextView
                     android:id="@+id/textView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="37dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="100dp"
                     android:text="Skill"
                     android:textColor="@color/black"
                     android:textSize="16sp"
-                    app:layout_constraintBottom_toTopOf="@+id/spinnerField"
+                    app:layout_constraintBottom_toTopOf="@+id/idSelectSkillSpinner"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/etDesignation"
-                    app:layout_constraintVertical_bias="1.0" />
+                    app:layout_constraintTop_toBottomOf="@+id/etDesignation" />
 
-                <Button
-                    android:id="@+id/btnSubmit"
-                    android:layout_width="159dp"
-                    android:layout_height="51dp"
-                    android:layout_marginTop="56dp"
-                    android:backgroundTint="@android:color/holo_blue_light"
-                    android:text="Submit"
-                    android:textColor="@color/white"
-                    app:cornerRadius="5dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                <EditText
+                    android:id="@+id/etExperience"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginEnd="15dp"
+                    android:ems="10"
+                    android:hint="Experience"
+                    android:inputType="numberDecimal"
+                    android:minHeight="48dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/spinnerField"
-                    app:layout_constraintVertical_bias="0.037" />
+                    app:layout_constraintTop_toBottomOf="@+id/etDesignation"
+                    tools:ignore="SpeakableTextPresentCheck" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </com.google.android.material.card.MaterialCardView>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="159dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="300dp"
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:text="Submit"
+            android:textColor="@color/white"
+            app:cornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/materialCardView2" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

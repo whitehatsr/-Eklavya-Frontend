@@ -12,9 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EklavyaFrontend">
         <activity
-            android:name=".RegisterActivity"
-            android:exported="false" />
-        <activity
             android:name=".RegisterActivityMentor"
             android:exported="false" />
         <activity

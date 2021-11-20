@@ -1,92 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="180dp"
     android:layout_marginTop="10dp"
     android:layout_marginBottom="10dp"
-    app:cardElevation="10dp"
-    app:cardCornerRadius="20dp"  >
+    app:cardCornerRadius="20dp"
+    app:cardElevation="10dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:id="@+id/tvName"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="1dp"
+        android:theme="@style/Theme.MaterialComponents.DayNight"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:layout_marginTop="16dp"
-            android:padding="5dp"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="Shivam Verma" />
-        <TextView
-            android:id="@+id/tvCollegeCourse"
-            android:layout_width="366dp"
-            android:layout_height="37dp"
-            android:layout_marginBottom="20dp"
+            android:layout_height="match_parent">
 
-            android:padding="5dp"
-            app:layout_constraintBottom_toTopOf="@+id/tvField"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.422"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvName"
-            app:layout_constraintVertical_bias="0.0"
-            tools:text="Computer Engineering student at VIIT" />
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginTop="16dp"
+                android:padding="5dp"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Shivam Verma" />
 
-        <TextView
-            android:id="@+id/tvField"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="52dp"
-            android:padding="5dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.073"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:text="Field:Web Developer" />
+            <TextView
+                android:id="@+id/tvCollegeCourse"
+                android:layout_width="366dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="10dp"
 
-        <TextView
-            android:id="@+id/tvtext"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:padding="5dp"
-            android:text="View full profile:"
-            android:textColor="#abcdef"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imgProfile"
-            app:layout_constraintHorizontal_bias="0.689"
-            app:layout_constraintStart_toStartOf="parent" />
+                android:layout_marginBottom="20dp"
+                android:padding="5dp"
+                app:layout_constraintBottom_toTopOf="@+id/tvField"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.422"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvName"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="Computer Engineering student at VIIT" />
 
-        <ImageView
-            android:id="@+id/imgProfile"
-            android:layout_width="53dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="132dp"
-            android:padding="5dp"
-            android:src="@drawable/ic_round_forward_24"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imgchat"
-            app:layout_constraintTop_toBottomOf="@+id/tvCollegeCourse"
-            app:layout_constraintVertical_bias="1.0" />
+            <TextView
+                android:id="@+id/tvField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="52dp"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.073"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="Field:Web Developer" />
 
-        <ImageView
-            android:id="@+id/imgchat"
-            android:layout_width="54dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="32dp"
-            android:padding="5dp"
-            android:src="@drawable/ic_round_chat_24"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvCollegeCourse"
-            app:layout_constraintVertical_bias="1.0" />
+            <TextView
+                android:id="@+id/tvtext"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginStart="10dp"
+                android:padding="5dp"
+                android:text="View full profile:"
+                android:textColor="#abcdef"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imgProfile"
+                app:layout_constraintHorizontal_bias="0.689"
+                app:layout_constraintStart_toStartOf="parent" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.cardview.widget.CardView>
+            <ImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="53dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="90dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_round_forward_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imgchat"
+                app:layout_constraintTop_toBottomOf="@+id/tvCollegeCourse"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <ImageView
+                android:id="@+id/imgchat"
+                android:layout_width="54dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="32dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_round_chat_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCollegeCourse"
+                app:layout_constraintVertical_bias="1.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

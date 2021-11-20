@@ -11,11 +11,13 @@
         <entry key="app/src/main/res/drawable/ic_round_forward_24.xml" value="0.2140625" />
         <entry key="app/src/main/res/layout/activity_mentee_main.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/activity_mentor_main.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/activity_my_mentees.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/activity_my_mentors.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/activity_register_mentee.xml" value="0.27309782608695654" />
         <entry key="app/src/main/res/layout/activity_register_mentor.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/item_mentee.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_mentor.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/item_my_mentees.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/item_my_mentors.xml" value="0.19791666666666666" />
       </map>
     </option>

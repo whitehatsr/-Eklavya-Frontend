@@ -75,7 +75,7 @@ class MyMentees : AppCompatActivity(), MyMenteeClicked {
                                 jsonObject.getString("email"),
                                 jsonObject.getString("role"),
                                 jsonObject.getString("collegeName"),
-                                "Comp Eng",
+                                jsonObject.getString("course"),
                                 jsonObject.getString("field")
                             )
                             menteesArray.add(mentee)

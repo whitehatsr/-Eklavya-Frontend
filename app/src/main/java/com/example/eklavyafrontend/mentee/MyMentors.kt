@@ -82,7 +82,7 @@ class MyMentors : AppCompatActivity(), MyMentorClicked {
                                 jsonObject.getString("email"),
                                 jsonObject.getString("role"),
                                 jsonObject.getString("companyName"),
-                                "SDE-1",
+                                jsonObject.getString("designation"),
                                 jsonObject.getString("field")
                             )
                             mentorsArray.add(mentor)

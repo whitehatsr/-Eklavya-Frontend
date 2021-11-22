@@ -42,6 +42,7 @@ class ChatRVAdapter(var userId: String) : RecyclerView.Adapter<ChatViewHolder>()
 
         if (currentItem.from == userId) {
             holder.receivedMessageView.visibility = View.GONE
+            holder.sentMessageView.visibility = View.VISIBLE
             holder.sentMessageView.text = currentItem.message
             holder.sentMessageView.textAlignment = View.TEXT_ALIGNMENT_TEXT_END
             //holder.messageView.textColors = Color.parseColor("#00FF00")
@@ -49,18 +50,21 @@ class ChatRVAdapter(var userId: String) : RecyclerView.Adapter<ChatViewHolder>()
         }
         else {
             holder.sentMessageView.visibility = View.GONE
+            holder.receivedMessageView.visibility = View.VISIBLE
             holder.receivedMessageView.text = currentItem.message
             holder.receivedMessageView.textAlignment = View.TEXT_ALIGNMENT_TEXT_START
 //            holder.receivedMessageView.setTextColor(Color.parseColor("#FF6600"))
         }
         if (currentItem.to == userId) {
             holder.sentMessageView.visibility = View.GONE
+            holder.receivedMessageView.visibility = View.VISIBLE
             holder.receivedMessageView.text = currentItem.message
             holder.receivedMessageView.textAlignment = View.TEXT_ALIGNMENT_TEXT_START
 //            holder.receivedMessageView.setTextColor(Color.parseColor("#FF6600"))
         }
         else {
             holder.receivedMessageView.visibility = View.GONE
+            holder.sentMessageView.visibility = View.VISIBLE
             holder.sentMessageView.text = currentItem.message
             holder.sentMessageView.textAlignment = View.TEXT_ALIGNMENT_TEXT_END
             //holder.messageView.textColors = Color.parseColor("#00FF00")

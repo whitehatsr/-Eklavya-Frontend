@@ -6,8 +6,8 @@
     android:padding="4dp">
 
     <TextView
-        android:id="@+id/textMessage"
-        android:layout_width="match_parent"
+        android:id="@+id/textMessageSent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/background_sent_message"
         android:padding="22dp"
@@ -15,6 +15,19 @@
         android:textColor="@color/white"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_max="300dp" />
+
+    <TextView
+        android:id="@+id/textMessageReceived"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_received_message"
+        android:padding="22dp"
+        android:text="Message Sent"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_max="300dp" />
 

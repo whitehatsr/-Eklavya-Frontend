@@ -39,25 +39,32 @@ class ChatRVAdapter(var userId: String) : RecyclerView.Adapter<ChatViewHolder>()
         val currentItem = items[position]
         //pos = position
 
-        holder.messageView.text = currentItem.message
-
 
         if (currentItem.from == userId) {
-            holder.messageView.textAlignment = View.TEXT_ALIGNMENT_TEXT_END
+            holder.receivedMessageView.visibility = View.GONE
+            holder.sentMessageView.text = currentItem.message
+            holder.sentMessageView.textAlignment = View.TEXT_ALIGNMENT_TEXT_END
             //holder.messageView.textColors = Color.parseColor("#00FF00")
-            holder.messageView.setTextColor(Color.parseColor("#00FF00"))
+//            holder.sentMessageView.setTextColor(Color.parseColor("#00FF00"))
         }
         else {
-            holder.messageView.textAlignment = View.TEXT_ALIGNMENT_TEXT_START
-            holder.messageView.setTextColor(Color.parseColor("#FF6600"))
+            holder.sentMessageView.visibility = View.GONE
+            holder.receivedMessageView.text = currentItem.message
+            holder.receivedMessageView.textAlignment = View.TEXT_ALIGNMENT_TEXT_START
+//            holder.receivedMessageView.setTextColor(Color.parseColor("#FF6600"))
         }
         if (currentItem.to == userId) {
-            holder.messageView.textAlignment = View.TEXT_ALIGNMENT_TEXT_START
-            holder.messageView.setTextColor(Color.parseColor("#FF6600"))
+            holder.sentMessageView.visibility = View.GONE
+            holder.receivedMessageView.text = currentItem.message
+            holder.receivedMessageView.textAlignment = View.TEXT_ALIGNMENT_TEXT_START
+//            holder.receivedMessageView.setTextColor(Color.parseColor("#FF6600"))
         }
         else {
-            holder.messageView.textAlignment = View.TEXT_ALIGNMENT_TEXT_END
-            holder.messageView.setTextColor(Color.parseColor("#00FF00"))
+            holder.receivedMessageView.visibility = View.GONE
+            holder.sentMessageView.text = currentItem.message
+            holder.sentMessageView.textAlignment = View.TEXT_ALIGNMENT_TEXT_END
+            //holder.messageView.textColors = Color.parseColor("#00FF00")
+//            holder.sentMessageView.setTextColor(Color.parseColor("#00FF00"))
         }
 
         /*if (currentItem.from == userId) {
@@ -92,5 +99,6 @@ class ChatRVAdapter(var userId: String) : RecyclerView.Adapter<ChatViewHolder>()
 }
 
 class ChatViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-    val messageView: TextView = itemView.findViewById(R.id.textMessage)
+    val sentMessageView: TextView = itemView.findViewById(R.id.textMessageSent)
+    val receivedMessageView: TextView = itemView.findViewById(R.id.textMessageReceived)
 }
